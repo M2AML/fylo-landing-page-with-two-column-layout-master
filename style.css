@@ -1,0 +1,999 @@
+/*FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/*RESET*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*CONTAINER*/
+.container {
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+/*BACKGROUND*/
+.bg-curve-desktop {
+  z-index: 1;
+  top: 900px;
+  width: 100%;
+  position: absolute;
+}
+.bg-curve-mobile {
+  display: none;
+}
+.bg-curve-color {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  height: 1650px;
+  width: 100%;
+  background-color: #f8f8fe;
+}
+.bg-email {
+  z-index: 3;
+  position: absolute;
+  bottom: 500px;
+  width: 100%;
+  height: 350px;
+  background-color: hsl(238, 22%, 44%);
+}
+.bg-footer {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 550px;
+  background-color: hsl(243, 87%, 12%);
+}
+/*MAIN*/
+main {
+  z-index: 4;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/*HEADER*/
+header {
+  margin-top: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+}
+header img {
+  width: 220px;
+}
+header nav {
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+}
+header nav a {
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: hsl(243, 87%, 12%);
+}
+/*SECTIONS*/
+/*SECTION1*/
+section:first-of-type {
+  margin-top: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section:first-of-type .text-section1 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+section:first-of-type .text-section1 h1 {
+  width: 90%;
+  font-size: 2.6rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: hsl(243, 87%, 12%);
+}
+section:first-of-type .text-section1 p {
+  color: hsl(243, 87%, 12%);
+  margin-top: 25px;
+  width: 80%;
+  font-size: 1.2em;
+}
+section:first-of-type img {
+  width: 40%;
+}
+section:first-of-type form {
+  /* padding-bottom: 30px; */
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+section:first-of-type form input[type="email"] {
+  width: 62%;
+  font-size: 1.2rem;
+  padding-left: 20px;
+  outline: none;
+  border: 1px solid hsl(243, 87%, 12%);
+  height: 50px;
+  border-radius: 5px;
+}
+section:first-of-type form button {
+  width: 35%;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(224, 93%, 58%);
+  transition: all 0.5s;
+}
+section:first-of-type form button:hover {
+  background-color: hsl(224, 100%, 68%);
+}
+section:first-of-type form.success input[type="email"] {
+  border: 1px solid hsl(224, 93%, 58%);
+}
+section:first-of-type form.error input[type="email"] {
+  border: 1px solid hsla(0, 100%, 50%, 0.808);
+}
+section:first-of-type form.error small {
+  visibility: visible;
+}
+section:first-of-type form small {
+  visibility: hidden;
+  color: hsla(0, 100%, 50%, 0.808);
+  font-size: 1rem;
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+}
+/**SECTION2**/
+section:last-of-type {
+  margin-top: 350px;
+  display: flex;
+  width: 100%;
+}
+section:last-of-type .text-section2 {
+  display: flex;
+  flex-direction: column;
+}
+section:last-of-type .text-section2 h2 {
+  font-family: "Raleway", sans-serif;
+  color: hsl(243, 87%, 12%);
+  font-weight: 700;
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+section:last-of-type .illustration2 {
+  width: 42%;
+}
+section:last-of-type .text-section2 .text-1,
+.text-2 {
+  font-family: "Open Sans", sans-serif;
+  color: hsl(238, 22%, 44%);
+  margin-top: 25px;
+  font-size: 1.2rem;
+  width: 68%;
+}
+section:last-of-type .text-section2 a {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+  width: 220px;
+  font-size: 1.2rem;
+  color: hsl(170, 45%, 43%);
+  text-decoration: none;
+  padding-bottom: 5px;
+  border-bottom: 1px solid hsl(170, 45%, 43%);
+  transition: all 0.5s;
+}
+section:last-of-type .text-section2 a:hover {
+  color: hsl(170, 50%, 61%);
+}
+/***TESTIMONIAL CARD SECTION***/
+section:last-of-type .testimonial-card {
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+  border-radius: 5px;
+  margin-top: 40px;
+  width: 480px;
+  padding: 35px;
+}
+section:last-of-type .testimonial-card p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+section:last-of-type .testimonial-card icon-quotes {
+  width: 25px;
+}
+section:last-of-type .testimonial-profile {
+  margin-top: 25px;
+  display: flex;
+}
+section:last-of-type .testimonial-profile img {
+  border-radius: 50%;
+  margin-right: 15px;
+  width: 70px;
+}
+section:last-of-type .testimonial-profile .name {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: hsl(243, 87%, 12%);
+}
+section:last-of-type .testimonial-profile .work {
+  color: hsl(238, 22%, 44%);
+}
+/*ARTICLE*/
+article {
+  margin-top: 250px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+article .text-article {
+  width: 55%;
+}
+article .text-article h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.6rem;
+  color: hsl(240, 75%, 98%);
+}
+article .text-article p {
+  width: 75%;
+  margin-top: 25px;
+  font-size: 1.3rem;
+  color: hsl(240, 75%, 98%);
+}
+article form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+article form input[type="email"] {
+  font-size: 1.2rem;
+  padding-left: 20px;
+  outline: none;
+  border: 1px solid hsl(243, 87%, 12%);
+  height: 55px;
+  border-radius: 5px;
+}
+article form button {
+  margin-top: 30px;
+  width: 36%;
+  height: 55px;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(224, 93%, 58%);
+  transition: all 0.5s;
+}
+article form button {
+  background-color: hsl(224, 100%, 68%);
+}
+article form button:hover {
+  background-color: hsl(224, 100%, 68%);
+}
+article form.success input[type="email"] {
+  border: 1px solid hsl(224, 93%, 58%);
+}
+article form.error input[type="email"] {
+  border: 1px solid hsla(0, 100%, 50%, 0.808);
+}
+article form.error small {
+  visibility: visible;
+}
+article form small {
+  visibility: hidden;
+  color: hsl(240, 75%, 98%);
+  font-size: 1rem;
+  position: absolute;
+  top: 60px;
+}
+/*FOOTER*/
+footer {
+  margin-top: 200px;
+  margin-bottom: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+footer .logo-footer {
+  width: 220px;
+  margin-bottom: 50px;
+}
+footer .info {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .info img {
+  width: auto;
+  margin-right: 10px;
+}
+footer .info .number-email > * {
+  margin-bottom: 20px;
+}
+footer .info .number-email,
+.about-us,
+.contact-us,
+.socialNetwork {
+  font-family: "Open Sans" sans-serif;
+  font-size: 1.3rem;
+  color: hsl(0, 0%, 75%);
+  width: 19.5%;
+  display: flex;
+  flex-direction: column;
+}
+footer .info .socialNetwork {
+  flex-direction: row;
+}
+footer .info .socialNetwork svg {
+  height: 60px;
+  width: 80px;
+  transition: all 0.5s;
+}
+footer .info a {
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: hsl(0, 0%, 75%);
+  transition: all 0.5s;
+}
+footer .info a:hover {
+  color: hsl(224, 93%, 58%);
+}
+/*RESPONSIVE*/
+/**MOBILE SCREEN**/
+@media screen and (min-width: 0px) and (max-width: 499px) {
+  /*BACKGROUND*/
+  .bg-curve-mobile {
+    display: block;
+    z-index: 1;
+    top: 920px;
+    width: 100%;
+    position: absolute;
+  }
+  .bg-curve-desktop {
+    display: none;
+  }
+  .bg-curve-color {
+    height: 2335px;
+  }
+  .bg-email {
+    bottom: 920px;
+    height: 370px;
+  }
+  .bg-footer {
+    bottom: 0;
+    height: 1120px;
+  }
+  /*HEADER*/
+  header {
+    font-size: 0.9rem;
+  }
+  header img {
+    width: 100px;
+  }
+  header nav {
+    width: 60%;
+  }
+  /*SECTIONS*/
+  /*SECTION1*/
+  section:first-of-type {
+    margin-top: 100px;
+    width: 100%;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  section:first-of-type .text-section1 {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  section:first-of-type .text-section1 h1 {
+    width: 92%;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  section:first-of-type .text-section1 p {
+    text-align: center;
+    margin-top: 25px;
+    width: 82%;
+    font-size: 1rem;
+  }
+  section:first-of-type img {
+    width: 100%;
+  }
+  section:first-of-type form:first-of-type {
+    margin-top: 40px;
+    flex-direction: column;
+    width: 90%;
+  }
+  section:first-of-type form:first-of-type input[type="email"] {
+    width: 100%;
+    font-size: 1rem;
+    padding-left: 20px;
+    height: 40px;
+    border-radius: 5px;
+  }
+  section:first-of-type form:first-of-type input[type="submit"] {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+  /**SECTION2**/
+  section:last-of-type {
+    margin-top: 160px;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  section:last-of-type .text-section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section:last-of-type .text-section2 h2 {
+    margin-top: 60px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  section:last-of-type .illustration2 {
+    width: 100%;
+  }
+  section:last-of-type .text-section2 .text-1,
+  .text-2 {
+    margin-top: 25px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  /***TESTIMONIAL CARD SECTION***/
+  section:last-of-type .testimonial-card {
+    width: 300px;
+    padding: 30px;
+  }
+  section:last-of-type .testimonial-card p {
+    margin-top: 8px;
+    font-size: 0.8rem;
+  }
+  section:last-of-type .testimonial-card .icon-quotes {
+    width: 10px;
+  }
+  section:last-of-type .testimonial-profile {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+  }
+  section:last-of-type .testimonial-profile img {
+    width: 40px;
+    height: 40px;
+  }
+  section:last-of-type .testimonial-profile .name {
+    font-size: 0.8rem;
+  }
+  section:last-of-type .testimonial-profile .work {
+    font-size: 0.8rem;
+  }
+  /*ARTICLE*/
+  article {
+    margin-top: 170px;
+    flex-direction: column;
+  }
+  article .text-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+  article .text-article h3 {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  article .text-article p {
+    width: 90%;
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+  article form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+  article form input[type="email"] {
+    height: 40px;
+    width: 100%;
+    font-size: 1rem;
+  }
+  article form input[type="submit"] {
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
+  }
+  /*FOOTER*/
+  footer .logo-footer {
+    width: 190px;
+    margin-bottom: 20px;
+  }
+  footer .info {
+    flex-direction: column;
+  }
+  footer .info .number-email {
+    margin-top: 15px;
+  }
+  footer .info .number-email,
+  .about-us,
+  .contact-us,
+  .socialNetwork {
+    font-size: 1.1rem;
+    margin-top: 40px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 640px) {
+  /*BACKGROUND*/
+  .bg-curve-mobile {
+    display: block;
+    z-index: 1;
+    top: 1250px;
+    width: 100%;
+    position: absolute;
+  }
+  .bg-curve-desktop {
+    display: none;
+  }
+  .bg-curve-color {
+    height: 2885px;
+  }
+  .bg-email {
+    bottom: 940px;
+    height: 600px;
+  }
+  .bg-footer {
+    bottom: 0;
+    height: 1300px;
+  }
+  /*MAIN*/
+  main {
+    z-index: 4;
+    width: 90%;
+  }
+  /*HEADER*/
+  header {
+    font-size: 1rem;
+  }
+  header img {
+    width: 190px;
+  }
+  header nav {
+    width: 50%;
+  }
+  /*SECTIONS*/
+  /*SECTION1*/
+  section:first-of-type {
+    margin-top: 100px;
+    width: 100%;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  section:first-of-type .text-section1 {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  section:first-of-type .text-section1 h1 {
+    width: 92%;
+    text-align: center;
+    font-size: 2rem;
+  }
+  section:first-of-type .text-section1 p {
+    text-align: center;
+    margin-top: 25px;
+    width: 82%;
+    font-size: 1.2rem;
+  }
+  section:first-of-type img {
+    width: 100%;
+  }
+  section:first-of-type form:first-of-type {
+    margin-top: 40px;
+    flex-direction: column;
+    width: 90%;
+  }
+  section:first-of-type form:first-of-type input[type="email"] {
+    width: 100%;
+    font-size: 1.2rem;
+    padding-left: 20px;
+    height: 70px;
+    border-radius: 5px;
+  }
+  section:first-of-type form:first-of-type input[type="submit"] {
+    width: 100%;
+    height: 70px;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  /**SECTION2**/
+  section:last-of-type {
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  section:last-of-type .text-section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section:last-of-type .text-section2 h2 {
+    margin-top: 60px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+  section:last-of-type .illustration2 {
+    width: 100%;
+  }
+  section:last-of-type .text-section2 .text-1,
+  .text-2 {
+    margin-top: 25px;
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  /*ARTICLE*/
+  article {
+    margin-top: 250px;
+    flex-direction: column;
+  }
+  article .text-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+  article .text-article h3 {
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+  article .text-article p {
+    width: 90%;
+    margin-top: 25px;
+    font-size: 1.35rem;
+  }
+  article form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+  }
+  article form input[type="email"] {
+    height: 65px;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  article form input[type="submit"] {
+    margin-top: 30px;
+    width: 100%;
+    height: 65px;
+    font-size: 20px;
+  }
+  /*FOOTER*/
+  footer .info {
+    flex-direction: column;
+  }
+  footer .info .number-email {
+    margin-top: 30px;
+    width: 100%;
+  }
+  footer .info .about-us,
+  .contact-us,
+  .socialNetwork {
+    margin-top: 50px;
+    width: 100%;
+  }
+}
+/**TABLET SCREEN**/
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  /*BACKGROUND*/
+  .bg-curve-desktop {
+    top: 600px;
+  }
+  .bg-curve-mobile {
+    display: none;
+  }
+  .bg-curve-color {
+    height: 1377px;
+  }
+  .bg-email {
+    z-index: 3;
+    position: absolute;
+    bottom: 450px;
+    width: 100%;
+    height: 250px;
+    background-color: hsl(238, 22%, 44%);
+  }
+  .bg-footer {
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 450px;
+    background-color: hsl(243, 87%, 12%);
+  }
+  /*MAIN*/
+  main {
+    width: 95%;
+  }
+  /*HEADER*/
+  header {
+    font-size: 1.2rem;
+  }
+  header img {
+    width: 190px;
+  }
+  header nav {
+    width: 40%;
+  }
+  /*SECTIONS*/
+  /*SECTION1*/
+  section:first-of-type {
+    margin-top: 10px;
+  }
+  section:first-of-type .text-section1 {
+    width: 62%;
+  }
+  section:first-of-type .text-section1 h1 {
+    width: 100%;
+    font-size: 1.6rem;
+  }
+  section:first-of-type .text-section1 p {
+    width: 95%;
+    font-size: 0.9em;
+  }
+  section:first-of-type img {
+    width: 60%;
+  }
+  section:first-of-type form:first-of-type {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  }
+  section:first-of-type form:first-of-type input[type="email"] {
+    font-size: 0.9rem;
+    height: 40px;
+  }
+  section:first-of-type form:first-of-type input[type="submit"] {
+    font-size: 14px;
+  }
+  /**SECTION2**/
+  section:last-of-type {
+    margin-top: 270px;
+    display: flex;
+    width: 100%;
+  }
+  section:last-of-type .text-section2 {
+    display: flex;
+    flex-direction: column;
+  }
+  section:last-of-type .text-section2 h2 {
+    width: 90%;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  section:last-of-type .illustration2 {
+    height: 50%;
+    width: 60%;
+  }
+  section:last-of-type .text-section2 .text-1,
+  .text-2 {
+    font-size: 0.9rem;
+    width: 70%;
+  }
+  section:last-of-type .text-section2 a {
+    width: 170px;
+    font-size: 1rem;
+  }
+  /***TESTIMONIAL CARD SECTION***/
+  section:last-of-type .testimonial-card {
+    width: 350px;
+    padding: 25px;
+  }
+  section:last-of-type .testimonial-card p {
+    margin-top: 5px;
+    font-size: 0.9rem;
+  }
+  section:last-of-type .testimonial-card icon-quotes {
+    width: 20px;
+  }
+  section:last-of-type .testimonial-profile {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+  }
+  section:last-of-type .testimonial-profile img {
+    width: 40px;
+    height: 40px;
+  }
+  section:last-of-type .testimonial-profile .name {
+    font-size: 0.8rem;
+  }
+  section:last-of-type .testimonial-profile .work {
+    margin-top: 5px;
+    font-size: 0.8rem;
+  }
+  /*ARTICLE*/
+  article {
+    margin-top: 150px;
+  }
+  article .text-article {
+    width: 55%;
+  }
+  article .text-article h3 {
+    font-size: 2.1rem;
+  }
+  article .text-article p {
+    width: 95%;
+    font-size: 1rem;
+  }
+  article form {
+    width: 45%;
+  }
+  article form input[type="email"] {
+    font-size: 1rem;
+    height: 45px;
+  }
+  article form input[type="submit"] {
+    width: 45%;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+  /*FOOTER*/
+  footer {
+    margin-top: 150px;
+  }
+  footer .logo-footer {
+    width: 180px;
+    margin-bottom: 50px;
+  }
+  footer .info {
+    width: 95%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  footer .info .number-email,
+  .about-us,
+  .contact-us,
+  .socialNetwork {
+    margin-right: 60px;
+    font-size: 1.1rem;
+    width: auto;
+  }
+  footer .info .socialNetwork svg {
+    height: 50px;
+    width: 65px;
+  }
+}
+/**DESKTOP SCREEN**/
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  /*BACKGROUND*/
+  .bg-curve-desktop {
+    top: 700px;
+  }
+  .bg-curve-color {
+    height: 1705px;
+  }
+  .bg-email {
+    bottom: 515px;
+    height: 325px;
+  }
+  .bg-footer {
+    height: 600px;
+  }
+  /*SECTIONS*/
+  /*SECTION1*/
+  section:first-of-type .text-section1 {
+    width: 50%;
+  }
+  section:first-of-type .text-section1 h1 {
+    width: 100%;
+    font-size: 2rem;
+  }
+  section:first-of-type .text-section1 p {
+    font-size: 1rem;
+  }
+  section:first-of-type img {
+    width: 50%;
+  }
+  /**SECTION2**/
+  section:last-of-type {
+    margin-top: 250px;
+  }
+  section:last-of-type .text-section2 h2 {
+    font-size: 2.1rem;
+  }
+  section:last-of-type .illustration2 {
+    width: 450px;
+    height: 450px;
+  }
+  section:last-of-type .text-section2 .text-1,
+  .text-2 {
+    font-size: 1.1rem;
+  }
+  section:last-of-type .text-section2 a {
+    width: 200px;
+    font-size: 1.2rem;
+  }
+  /*ARTICLE*/
+  article {
+    margin-top: 250px;
+  }
+  article .text-article {
+    width: 60%;
+  }
+  article .text-article h3 {
+    font-size: 2.4rem;
+  }
+  article .text-article p {
+    width: 85%;
+    font-size: 1.1rem;
+  }
+  article form input[type="email"] {
+    font-size: 1.1rem;
+    height: 55px;
+  }
+  article form input[type="submit"] {
+    width: 40%;
+    font-size: 0.9rem;
+  }
+  /*FOOTER*/
+  footer .logo-footer {
+    width: 220px;
+    margin-bottom: 50px;
+  }
+  footer .info .number-email,
+  .about-us,
+  .contact-us,
+  .socialNetwork {
+    font-size: 1.3rem;
+    width: auto;
+  }
+  footer .info .socialNetwork svg {
+    height: 55px;
+    width: 70px;
+  }
+}
