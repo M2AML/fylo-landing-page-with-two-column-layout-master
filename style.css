@@ -132,7 +132,7 @@ section:first-of-type form input[type="email"] {
   height: 50px;
   border-radius: 5px;
 }
-section:first-of-type form button {
+section:first-of-type form input[type="submit"] {
   width: 35%;
   font-family: "Raleway", sans-serif;
   font-size: 15px;
@@ -144,25 +144,8 @@ section:first-of-type form button {
   background-color: hsl(224, 93%, 58%);
   transition: all 0.5s;
 }
-section:first-of-type form button:hover {
+section:first-of-type form input[type="submit"]:hover {
   background-color: hsl(224, 100%, 68%);
-}
-section:first-of-type form.success input[type="email"] {
-  border: 1px solid hsl(224, 93%, 58%);
-}
-section:first-of-type form.error input[type="email"] {
-  border: 1px solid hsla(0, 100%, 50%, 0.808);
-}
-section:first-of-type form.error small {
-  visibility: visible;
-}
-section:first-of-type form small {
-  visibility: hidden;
-  color: hsla(0, 100%, 50%, 0.808);
-  font-size: 1rem;
-  position: absolute;
-  left: 0;
-  bottom: -30px;
 }
 /**SECTION2**/
 section:last-of-type {
@@ -277,7 +260,7 @@ article form input[type="email"] {
   height: 55px;
   border-radius: 5px;
 }
-article form button {
+article form input[type="submit"] {
   margin-top: 30px;
   width: 36%;
   height: 55px;
@@ -291,27 +274,11 @@ article form button {
   background-color: hsl(224, 93%, 58%);
   transition: all 0.5s;
 }
-article form button {
+article form input[type="submit"] {
   background-color: hsl(224, 100%, 68%);
 }
-article form button:hover {
+article form input[type="submit"]:hover {
   background-color: hsl(224, 100%, 68%);
-}
-article form.success input[type="email"] {
-  border: 1px solid hsl(224, 93%, 58%);
-}
-article form.error input[type="email"] {
-  border: 1px solid hsla(0, 100%, 50%, 0.808);
-}
-article form.error small {
-  visibility: visible;
-}
-article form small {
-  visibility: hidden;
-  color: hsl(240, 75%, 98%);
-  font-size: 1rem;
-  position: absolute;
-  top: 60px;
 }
 /*FOOTER*/
 footer {
@@ -365,9 +332,17 @@ footer .info a {
 footer .info a:hover {
   color: hsl(224, 93%, 58%);
 }
+.attribution {
+  margin-bottom: 20px;
+  color: hsl(0, 0%, 100%);
+}
+.attribution a {
+  color: hsl(224, 93%, 58%);
+  text-decoration: none;
+}
 /*RESPONSIVE*/
 /**MOBILE SCREEN**/
-@media screen and (min-width: 0px) and (max-width: 499px) {
+@media screen and (min-width: 0px) and (max-width: 498px) {
   /*BACKGROUND*/
   .bg-curve-mobile {
     display: block;
